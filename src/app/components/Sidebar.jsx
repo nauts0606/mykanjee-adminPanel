@@ -44,7 +44,7 @@ const Sidebar = () => {
         <div className='flex h-screen'>
 
             {/*------------------------------- Lest side Menu -------------------------------------*/}
-            <div className="flex flex-col w-1/5 p-4 bg-[#fcf8ee] justify-between h-full text-white">
+            <div className="flex flex-col w-1/4 p-4 bg-[#fcf8ee] justify-between h-full text-white">
                 <div className='flex items-center space-x-3 py-2'>
                     <Image src={logo} width={50} height={50} />
                     <span className='text-black font-bold'>Kardify</span>

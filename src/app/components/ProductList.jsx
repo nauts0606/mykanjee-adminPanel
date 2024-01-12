@@ -124,6 +124,13 @@ const ProductList = () => {
     newImages.splice(index, 1);
     setUploadedImages(newImages);
   };
+
+  const [showSecondDiv, setShowSecondDiv] = useState(false);
+
+  const handleProductTypeChange = (event) => {
+    const selectedValue = event.target.value;
+    setShowSecondDiv(selectedValue === 'vehicle selection');
+  };
   return (
     <>
       <div className='px-[20px] py-[10px] space-y-5 container mx-auto w-[100%] overflow-y-scroll'>
@@ -358,7 +365,7 @@ const ProductList = () => {
                           className="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full hover:bg-red-600"
                           onClick={() => handleImageRemove(index)}
                         >
-                          <FaTimes className='text-[10px]'/>
+                          <FaTimes className='text-[10px]' />
                         </button>
                       </div>
                     ))}
@@ -410,52 +417,53 @@ const ProductList = () => {
               </div>
             </div>
 
-            <div className='flex items-center justify-between gap-[30px]'>
+            <div className='flex items-end justify-between gap-[30px]'>
               <div className='flex flex-col space-y-3 border border-[#D0D5DD] rounded-[16px] p-[16px] w-[100%]'>
                 <span className='text-[18px] font-[600]'>Product Brand Info</span>
                 <div className='flex flex-col space-y-1 w-full'>
                   <span className='text-[14px] text-[#344054] font-[500]'>Product Type</span>
-                  <select className='!text-[14px] outline-none focus-none'>
+                  <select className='!text-[14px] outline-none focus-none' onChange={handleProductTypeChange}>
                     <option>Select Product Type</option>
-                    <option>Vehicle Selection</option>
-                    <option>General</option>
+                    <option value='vehicle selection'>Vehicle Selection</option>
+                    <option value='general'>General</option>
                   </select>
-
-                  <div className='flex items-end gap-[10px]'>
+                  <div className={`flex flex-col space-y-1 w-full ${showSecondDiv ? '' : 'hidden'}`}>
+                    <div className='flex items-end gap-[10px]'>
+                      <div className='flex flex-col space-y-1 w-full'>
+                        <span className='text-[14px] text-[#344054] font-[500]'>Product Type</span>
+                        <select className='!text-[14px] outline-none focus-none w-[100%]'>
+                          <option>Select Brand Here</option>
+                          <option>Audi</option>
+                          <option>BMW</option>
+                        </select>
+                      </div>
+                      <Image src="/images/categoryimage.svg" width={70} height={50} className='rounded-[8px]' />
+                    </div>
                     <div className='flex flex-col space-y-1 w-full'>
-                      <span className='text-[14px] text-[#344054] font-[500]'>Product Type</span>
+                      <span className='text-[14px] text-[#344054] font-[500]'>Car Model</span>
                       <select className='!text-[14px] outline-none focus-none w-[100%]'>
-                        <option>Select Brand Here</option>
+                        <option>Select Car Model Here</option>
                         <option>Audi</option>
                         <option>BMW</option>
                       </select>
                     </div>
-                    <Image src="/images/categoryimage.svg" width={70} height={50} className='rounded-[8px]' />
-                  </div>
-                  <div className='flex flex-col space-y-1 w-full'>
-                    <span className='text-[14px] text-[#344054] font-[500]'>Car Model</span>
-                    <select className='!text-[14px] outline-none focus-none w-[100%]'>
-                      <option>Select Car Model Here</option>
-                      <option>Audi</option>
-                      <option>BMW</option>
-                    </select>
-                  </div>
-                  <div className='flex items-end gap-[10px]'>
-                    <div className='flex flex-col space-y-1 w-full'>
-                      <span className='text-[14px] text-[#344054] font-[500]'>Start Year</span>
-                      <select className='!text-[14px] outline-none focus-none w-[100%]'>
-                        <option>Select Brand Here</option>
-                        <option>Audi</option>
-                        <option>BMW</option>
-                      </select>
-                    </div>
-                    <div className='flex flex-col space-y-1 w-full'>
-                      <span className='text-[14px] text-[#344054] font-[500]'>Last Year</span>
-                      <select className='!text-[14px] outline-none focus-none w-[100%]'>
-                        <option>Select Brand Here</option>
-                        <option>Audi</option>
-                        <option>BMW</option>
-                      </select>
+                    <div className='flex items-end gap-[10px]'>
+                      <div className='flex flex-col space-y-1 w-full'>
+                        <span className='text-[14px] text-[#344054] font-[500]'>Start Year</span>
+                        <select className='!text-[14px] outline-none focus-none w-[100%]'>
+                          <option>Select Brand Here</option>
+                          <option>Audi</option>
+                          <option>BMW</option>
+                        </select>
+                      </div>
+                      <div className='flex flex-col space-y-1 w-full'>
+                        <span className='text-[14px] text-[#344054] font-[500]'>Last Year</span>
+                        <select className='!text-[14px] outline-none focus-none w-[100%]'>
+                          <option>Select Brand Here</option>
+                          <option>Audi</option>
+                          <option>BMW</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
