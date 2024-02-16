@@ -5,8 +5,8 @@ import SnackbarProvider from './snackbarProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Kardify',
-  description: 'Multiple Car Accessories',
+  title: 'Mykanjee',
+  description: 'Multiple  Accessories',
 }
 
 export default function RootLayout({ children }) {

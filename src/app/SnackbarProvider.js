@@ -1,6 +1,6 @@
 "use client"
 import React, { createContext, useContext, useState } from 'react';
-import Snackbar from '@mui/material/Snackbar';
+import Snackbar from '@mui/material/Snackbar';  
 import MuiAlert from '@mui/material/Alert';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -25,24 +25,29 @@ const SnackbarProvider = ({ children }) => {
 
   const closeSnackbar = () => {
     setOpen(false);
-    setMessage('')
-    setSeverity('success')
+    setMessage('');
+    setSeverity('success');
   };
 
   return (
     <SnackbarContext.Provider value={{ openSnackbar, closeSnackbar }}>
-      {isLoading ?
+      {isLoading ? (
         <LoadingSpinner />
-        :
+      ) : (
         <>
           {children}
-          <Snackbar open={open} autoHideDuration={2000} onClose={closeSnackbar}>
+          <Snackbar
+            open={open}
+            autoHideDuration={2000}
+            onClose={closeSnackbar}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          >
             <Alert severity={severity} sx={{ width: '100%' }} onClose={closeSnackbar}>
               {message}
             </Alert>
           </Snackbar>
         </>
-      }
+      )}
     </SnackbarContext.Provider>
   );
 };

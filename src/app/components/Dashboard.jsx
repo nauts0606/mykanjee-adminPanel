@@ -4,8 +4,6 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import LineChart1 from './LineChart';
-import PieChart1 from './PieChart';
 
 const options = [
   'Total',
@@ -210,10 +208,7 @@ const Dashboard = () => {
         </div>
     </div>
 
-    <div className='flex items-center w-full gap-[10px] justify-between'>
-        <LineChart1 />
-        <PieChart1 />
-    </div>
+   
 
 </div>
   )
