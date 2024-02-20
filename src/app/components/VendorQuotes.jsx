@@ -74,7 +74,7 @@ const VendorQuotes = () => {
             <div className='flex flex-col space-y-1 border border-[#EAECF0] rounded-[8px] p-[10px]'>
               <div className='flex items-center justify-between'>
                 <div className='flex space-x-2 items-center'>
-                <span className='text-[18px] font-[500] text-[#101828]'>Vendor Quote's Data</span>
+                <span className='text-[18px] font-[500] text-[#101828]'>Vendor Quote&apos;s Data</span>
                 {/*-------------------------------------------------------------------- {categoryData.length} */}
                   <span className='px-[10px] py-[5px] bg-[#FCF8EE] rounded-[16px] text-[12px] text-[#A1853C]'> Quotes</span>
               </div>

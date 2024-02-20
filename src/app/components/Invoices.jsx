@@ -93,7 +93,7 @@ const Invoices = () => {
                   <TableCell style={{ minWidth: 200 }}>User Name</TableCell>
                   <TableCell style={{ minWidth: 150 }}>Date</TableCell>
                   <TableCell style={{ minWidth: 200 }}>Product Name </TableCell>
-                  <TableCell style={{ minWidth: 200 }}>  Seller's Name  </TableCell>
+                  <TableCell style={{ minWidth: 200 }}>  Seller&apos;s Name  </TableCell>
                   <TableCell style={{ minWidth: 250 }}> Feedback </TableCell>
                 
                 </TableRow>

@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import Swal from "sweetalert2";
 // import { useSnackbar } from '../SnackbarProvider';
-import { useSnackbar } from "../snackbarProvider";
+import { useSnackbar } from "../SnackbarProvider";
 
 import axios from "axios";
 import { useFormik } from "formik";

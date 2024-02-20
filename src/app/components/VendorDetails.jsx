@@ -7,7 +7,7 @@ import Switch from '@mui/material/Switch';
 import { TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper, Pagination } from '@mui/material';
 import Image from 'next/image';
 import Swal from 'sweetalert2'
-import { useSnackbar } from '../snackbarProvider';
+import { useSnackbar } from '../SnackbarProvider';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -241,7 +241,7 @@ const VendorDetails = () => {
             <div className='flex flex-col space-y-1 border border-[#EAECF0] rounded-[8px] p-[10px]'>
               <div className='flex items-center justify-between'>
                 <div className='flex space-x-2 items-center'>
-                <span className='text-[18px] font-[500] text-[#101828]'>Vendor's Data</span>
+                <span className='text-[18px] font-[500] text-[#101828]'>Vendor&apos;s Data</span>
                 {/*-------------------------------------------------------------------- {categoryData.length} */}
                   <span className='px-[10px] py-[5px] bg-[#FCF8EE] rounded-[16px] text-[12px] text-[#A1853C]'> details</span>
               </div>
@@ -329,7 +329,7 @@ const VendorDetails = () => {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Vendor's Documents</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">Vendor&apos;s Documents</DialogTitle>
         <DialogContent dividers={scroll === 'paper'}>
           <DialogContentText
             id="scroll-dialog-description"

@@ -121,7 +121,7 @@ const Sidebar = () => {
                                     <Image src={category} height={20} width={20} />
                                     <div>
                                     <div > {/* <span className='bg-black w-[7px] h-[7px] rounded-full'></span> */}
-                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Seller's List</span></div>
+                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Seller&apos;s List</span></div>
                                 </div>
                                 </div>
                                 <div className='flex flex-col space-y-1 py-2'>
@@ -134,7 +134,7 @@ const Sidebar = () => {
                                     <Image src={category} height={20} width={20} />
                                     <div>
                                     <div > {/* <span className='bg-black w-[7px] h-[7px] rounded-full'></span> */}
-                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Driver's List</span></div>
+                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Driver&apos;s List</span></div>
                                 </div>
                                 </div>
                                 <div className='flex flex-col space-y-1 py-2'>
@@ -147,7 +147,7 @@ const Sidebar = () => {
                                     <Image src={category} height={20} width={20} />
                                     <div>
                                     <div > {/* <span className='bg-black w-[7px] h-[7px] rounded-full'></span> */}
-                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Order's List</span></div>
+                                    <span  className='text-[15px] hover:text-[#FCF8EE]'>Order&apos;s List</span></div>
                                 </div>
                                 </div>
                                 <div className='flex flex-col space-y-1 py-2'>

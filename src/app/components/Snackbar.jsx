@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 
-export default function Snackbar() {
+export default function Snackbar1() {
     const [state, setState] = React.useState({
         open: false,
         vertical: 'top',

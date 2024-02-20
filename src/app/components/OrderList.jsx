@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Swal from "sweetalert2";
-import { useSnackbar } from "../snackbarProvider";
+import { useSnackbar } from "../SnackbarProvider";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -315,7 +315,7 @@ const OrderList = () => {
         <div className=" py-[10px] flex flex-col space-y-5">
           <div className="flex flex-col space-y-1">
             <span className="text-[30px] text-[#101828] font-[500]">
-              Order's List
+              Order&apos;s List
             </span>
             {/* <span className='text-[#667085] font-[400] text-[16px]'>Effortlessly organize your category offerings with intuitive Category Setup for a seamless and structured e-commerce experience.</span> */}
           </div>
@@ -324,7 +324,7 @@ const OrderList = () => {
             <div className="flex items-center justify-between">
               <div className="flex space-x-2 items-center">
                 <span className="text-[18px] font-[500] text-[#101828]">
-                  Order's Data
+                  Order&apos;s Data
                 </span>
                 {/*-------------------------------------------------------------------- {categoryData.length} */}
                 <span className="px-[10px] py-[5px] bg-[#FCF8EE] rounded-[16px] text-[12px] text-[#A1853C]">

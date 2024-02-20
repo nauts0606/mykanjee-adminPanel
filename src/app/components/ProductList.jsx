@@ -29,7 +29,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import { useSnackbar } from "../snackbarProvider";
+import { useSnackbar } from "../SnackbarProvider";
 
 // const validationSchema = Yup.object({
 //   categoryName: Yup.string().required('ProductList Name is required'),
@@ -208,7 +208,7 @@ const ProductList = () => {
         <div className=" py-[10px] flex flex-col space-y-5">
           <div className="flex flex-col space-y-1">
             <span className="text-[30px] text-[#101828] font-[500]">
-              Product's List
+              Product&apos;s List
             </span>
             {/* <span className='text-[#667085] font-[400] text-[16px]'>Effortlessly organize your category offerings with intuitive Category Setup for a seamless and structured e-commerce experience.</span> */}
           </div>
@@ -217,7 +217,7 @@ const ProductList = () => {
             <div className="flex items-center justify-between">
               <div className="flex space-x-2 items-center">
                 <span className="text-[18px] font-[500] text-[#101828]">
-                  Product's Data
+                  Product&apos;s Data
                 </span>
                 {/*-------------------------------------------------------------------- {categoryData.length} */}
                 <span className="px-[10px] py-[5px] bg-[#FCF8EE] rounded-[16px] text-[12px] text-[#A1853C]">
