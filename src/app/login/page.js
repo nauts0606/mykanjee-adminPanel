@@ -22,7 +22,7 @@ const Page = () => {
         // return
     
         try {
-          const response = await axios.post('http://localhost:3000/auth/login', {
+          const response = await axios.post('http://103.174.103.122:3000/auth/login', {
             userName, password
           });
             

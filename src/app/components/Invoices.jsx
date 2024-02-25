@@ -11,7 +11,7 @@ const Invoices = () => {
   const handleDownload = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/auth/commission-invoice?sellerId=65ba47ea254058cd0c94d72c&fromDate=1/30/2024&toDate=2/2/2024', {
+      const response = await fetch('http://103.174.103.122:3000/auth/commission-invoice?sellerId=65ba47ea254058cd0c94d72c&fromDate=1/30/2024&toDate=2/2/2024', {
         method: 'GET',
         headers: {
           'authorization': localStorage.getItem('logintoken'),
@@ -36,7 +36,7 @@ const Invoices = () => {
   };
 
   // const getFeedback=() => {
-  //   axios.get('http://localhost:3000/auth/commission-invoice?sellerId=65ba47ea254058cd0c94d72c&fromDate=1/30/2024&toDate=2/2/2024', {
+  //   axios.get('http://103.174.103.122:3000/auth/commission-invoice?sellerId=65ba47ea254058cd0c94d72c&fromDate=1/30/2024&toDate=2/2/2024', {
   //     headers: {
   //       'authorization': localStorage.getItem('logintoken')},
   //   })

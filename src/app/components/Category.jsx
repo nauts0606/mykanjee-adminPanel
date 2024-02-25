@@ -58,7 +58,7 @@ const Category = () => {
 
   const getCategory = () => {
     axios
-      .get("http://localhost:3000/auth/category-getall", {
+      .get("http://103.174.103.122:3000/auth/category-getall", {
         headers: {
           authorization: localStorage.getItem("logintoken"),
         },
@@ -99,7 +99,7 @@ const Category = () => {
         // Making the POST request
         await axios
           .post(
-            "http://localhost:3000/auth/category",
+            "http://103.174.103.122:3000/auth/category",
             {
               category_no: values.category_no,
               categoryName: values.categoryName,
@@ -136,7 +136,7 @@ const Category = () => {
 
         await axios
           .put(
-            "http://localhost:3000/auth/category-update",
+            "http://103.174.103.122:3000/auth/category-update",
             {
               categoryId: idData,
               category_no: values.category_no,
@@ -170,7 +170,7 @@ const Category = () => {
           });
         // } else {
         //   console.log("imageEditData", imageEditData);
-        //   await    axios.put("http://localhost:3000/auth/category-update", {categoryId:id,category_no: values.category_no , categoryName:values.categoryName , image:imageEditData}, { headers  : {
+        //   await    axios.put("http://103.174.103.122:3000/auth/category-update", {categoryId:id,category_no: values.category_no , categoryName:values.categoryName , image:imageEditData}, { headers  : {
         //     'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
         //         'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         //       }})
@@ -193,7 +193,7 @@ const Category = () => {
     await setIdData(id);
 
     await axios
-      .get(`http://localhost:3000/auth/category-getall/${id}`, {
+      .get(`http://103.174.103.122:3000/auth/category-getall/${id}`, {
         headers: {
           authorization: localStorage.getItem("logintoken"),
         },

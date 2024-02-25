@@ -112,7 +112,7 @@ const OrderList = () => {
 
     await axios
       .put(
-        "http://localhost:3000/auth/checkout-update",
+        "http://103.174.103.122:3000/auth/checkout-update",
         {
           status: value?.target?.value,
           checkoutId: id,
@@ -139,7 +139,7 @@ const OrderList = () => {
 
   const getOrderApi = () => {
     axios
-      .get("http://localhost:3000/auth/checkout-get-all", {
+      .get("http://103.174.103.122:3000/auth/checkout-get-all", {
         headers: {
           authorization: localStorage.getItem("logintoken"),
         },
@@ -167,7 +167,7 @@ const OrderList = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3000/auth/invoice?checkoutId=${outObjIdD}&sellerId=${sellerId}`,
+        `http://103.174.103.122:3000/auth/invoice?checkoutId=${outObjIdD}&sellerId=${sellerId}`,
         {
           method: "GET",
           headers: {
@@ -198,7 +198,7 @@ const OrderList = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:3000/auth/shipping-invoice?checkoutId=${outObjIdD}&sellerId=${sellerId}`,
+        `http://103.174.103.122:3000/auth/shipping-invoice?checkoutId=${outObjIdD}&sellerId=${sellerId}`,
         {
           method: "GET",
           headers: {
@@ -225,7 +225,7 @@ const OrderList = () => {
 
   const getDriverApi = () => {
     axios
-      .get("http://localhost:3000/auth/get-all/driver", {
+      .get("http://103.174.103.122:3000/auth/get-all/driver", {
         // headers: {
         //   'authorization': localStorage.getItem('logintoken')},
       })
@@ -253,7 +253,7 @@ const OrderList = () => {
   
     await axios
       .post(
-        "http://localhost:3000/auth/assign-driver",
+        "http://103.174.103.122:3000/auth/assign-driver",
         {
           userId:userId,
           sellerId:data?.sellerId,
@@ -284,7 +284,7 @@ const OrderList = () => {
     
       await axios
       .put(
-        "http://localhost:3000/auth/checkout-update",
+        "http://103.174.103.122:3000/auth/checkout-update",
         {
           driverId:selectValue,
           checkoutId: data._id,

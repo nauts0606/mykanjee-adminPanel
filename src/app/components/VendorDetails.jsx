@@ -89,7 +89,7 @@ const VendorDetails = () => {
     
 
     const handleUpdate = async (value, id) => {
-        await axios.put("http://localhost:3000/auth/vendor/register/admin-update", {approve:value, vendorId:id}, { headers  : {
+        await axios.put("http://103.174.103.122:3000/auth/vendor/register/admin-update", {approve:value, vendorId:id}, { headers  : {
                 // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
               'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
             }})
@@ -122,7 +122,7 @@ const VendorDetails = () => {
         if (value == false) {
             handleOpen()
         } 
-        await axios.put("http://localhost:3000/auth/approve-seller", {approve:value, userId:id}, { headers  : {
+        await axios.put("http://103.174.103.122:3000/auth/approve-seller", {approve:value, userId:id}, { headers  : {
                 // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
               'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
             }})
@@ -149,7 +149,7 @@ const VendorDetails = () => {
     const handleFalse = async () => {
       
         
-        await axios.post("http://localhost:3000/auth/dissa/reason-seller", {reason : inputValue , userId:idCloseDialogue} , { headers  : {
+        await axios.post("http://103.174.103.122:3000/auth/dissa/reason-seller", {reason : inputValue , userId:idCloseDialogue} , { headers  : {
             // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
           'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         }})
@@ -165,7 +165,7 @@ const VendorDetails = () => {
             console.error('Error:', error);
           });
 
-        await axios.put("http://localhost:3000/auth/approve-seller", {approve:true, userId:idCloseDialogue}, { headers  : {
+        await axios.put("http://103.174.103.122:3000/auth/approve-seller", {approve:true, userId:idCloseDialogue}, { headers  : {
             // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
           'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         }})
@@ -185,7 +185,7 @@ const VendorDetails = () => {
 
 
     const getVendorApi = () => {
-        axios.get('http://localhost:3000/auth/vendor/register-get', {
+        axios.get('http://103.174.103.122:3000/auth/vendor/register-get', {
             headers: {
               'authorization': localStorage.getItem('logintoken')},
           })
@@ -209,7 +209,7 @@ const VendorDetails = () => {
     const handleDialogData = async(id) => {
         // setOpen(true)
         // console.log("iamfordialogue", elem);
-       await axios.get( `http://localhost:3000/auth/vendor/register-get/${id}`, {
+       await axios.get( `http://103.174.103.122:3000/auth/vendor/register-get/${id}`, {
             headers: {
               'authorization': localStorage.getItem('logintoken')},
           })

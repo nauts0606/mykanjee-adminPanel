@@ -39,7 +39,7 @@ const Transection = () => {
     try {
       // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint for deleting a category
       const response = await Axios.delete(
-        `http://localhost:3000/auth/transection-delete/${id}`,
+        `http://103.174.103.122:3000/auth/transection-delete/${id}`,
         {
           headers: {
             // 'Content-Type': 'application/json', // Adjust the content type based on your API requirements
@@ -62,7 +62,7 @@ const Transection = () => {
   };
   const getTransection = () => {
     axios
-      .get("http://localhost:3000/auth/transection/get-all", {
+      .get("http://103.174.103.122:3000/auth/transection/get-all", {
         headers: {
           authorization: localStorage.getItem("logintoken"),
         },

@@ -62,7 +62,7 @@ const DriverList = () => {
 
      
     
-        await axios.put("http://localhost:3000/auth/active-driver", {statusActive:value, userId:id}, { headers  : {
+        await axios.put("http://103.174.103.122:3000/auth/active-driver", {statusActive:value, userId:id}, { headers  : {
                 // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
               'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
             }})
@@ -97,7 +97,7 @@ const DriverList = () => {
          
           
 
-         await axios.put("http://localhost:3000/auth/approve-driver", {approve:value, userId:id}, { headers  : {
+         await axios.put("http://103.174.103.122:3000/auth/approve-driver", {approve:value, userId:id}, { headers  : {
             // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
           'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         }})
@@ -126,7 +126,7 @@ const DriverList = () => {
         setInputValue(event.target.value);
       };
     const handleFalse = async () => {
-        await axios.post("http://localhost:3000/auth/dissa/reason-driver", {reason : inputValue , userId:idCloseDialogue} , { headers  : {
+        await axios.post("http://103.174.103.122:3000/auth/dissa/reason-driver", {reason : inputValue , userId:idCloseDialogue} , { headers  : {
             // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
           'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         }})
@@ -137,7 +137,7 @@ const DriverList = () => {
             setInputValue("") 
 
 
-             axios.put("http://localhost:3000/auth/approve-driver", {approve:valCloseDialogue, userId:idCloseDialogue}, { headers  : {
+             axios.put("http://103.174.103.122:3000/auth/approve-driver", {approve:valCloseDialogue, userId:idCloseDialogue}, { headers  : {
               // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
             'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
           }})
@@ -162,7 +162,7 @@ const DriverList = () => {
             console.error('Error:', error);
           });
         
-        await axios.put("http://localhost:3000/auth/approve-driver", {approve:true, userId:idCloseDialogue}, { headers  : {
+        await axios.put("http://103.174.103.122:3000/auth/approve-driver", {approve:true, userId:idCloseDialogue}, { headers  : {
             // 'Content-Type': 'multipart/form-data', // Adjust the content type based on your API requirements
           'authorization':  localStorage.getItem('logintoken'), // Add any authentication headers if needed
         }})
@@ -180,7 +180,7 @@ const DriverList = () => {
     }
 
     const getDriverApi = () => {
-        axios.get('http://localhost:3000/auth/get-all/driver', {
+        axios.get('http://103.174.103.122:3000/auth/get-all/driver', {
             // headers: {
             //   'authorization': localStorage.getItem('logintoken')},
           })
